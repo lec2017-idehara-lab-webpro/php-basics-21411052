@@ -6,51 +6,47 @@
   </head>
   <body>
 
-<?php
-  print('PHP の課題'); // この行を <h1> で表示しなさい。
+    <?php
+    print ("<h1>PHPの課題</h1>");
+    print ("<h2>計算</h2>");
+    $x = 10;
+    $y = 20;
 
-  print('計算'); // この行を <h2> で表示しなさい。
-  $x = 10;
-  $y = 20;
-// $x と $yの和、差、積、商を php で計算して表示しなさい。
-// 可能であれば、表形式(table) で表示しなさい。
+    $wa = $x + $y;
+    $sa = $x - $y;
+    $seki = $x * $y;
+    $syou = $x / $y;
+    ?>
 
-  print('文字列'); // この行を <h2> で表示しなさい。
-  $base = '21611';
-  $personal = '499';
-// $base と $personal を連結し、表示しなさい。
-
-  print('変数定義のチェック'); // この行を <h2> で表示しなさい。
-
-  // $x, $y, $z のそれぞれについて、その変数がこの場所で定義されているかどうか表示しなさい。
-  // 動的にチェックすること。
- ?>
-
- <hr />
-
-期待される出力：
-
-<h1>PHP の課題</h1>
-<h2>計算</h2>
-<table>
-  <tr><td>和</td><td>30</td></tr>
-  <tr><td>差</td><td>-10</td></tr>
-  <tr><td>積</td><td>200</td></tr>
-  <tr><td>商</td><td>0.5</td></tr>
-</table>
-
-<h2>文字列</h2>
-
-21611499
-
-<h2>変数定義のチェック</h2>
-<table>
-  <tr><td>x</td><td>1</td></tr>
-  <tr><td>y</td><td>1</td></tr>
-  <tr><td>z</td><td>0</td></tr>
-</table>
+    <table>
+      <tr><td>和</td><td><?php echo $wa; ?></td></tr>
+      <tr><td>差</td><td><?php echo $sa; ?></td></tr>
+      <tr><td>積</td><td><?php echo $seki; ?></td></tr>
+      <tr><td>商</td><td><?php echo $syou; ?></td></tr>
+    </table>
 
 
+    <?php
+    print ("<h2>文字列</h2>");
+    $base = '21411';
+    $personal = '052';
+
+    $ID = $base . $personal;
+     ?>
+     <p><?php echo $ID; ?></p>
+
+    <?php
+    print ("<h2>変数定義のチェック</h2>");
+    $X = isset($x);
+    $Y = isset($y);
+    $Z = isset($z);
+
+     ?>
+     <table>
+       <tr><td>x</td><td><?php echo $X; ?></td></tr>
+       <tr><td>y</td><td><?php echo $Y; ?></td></tr>
+       <tr><td>z</td><td><?php echo $Z; ?></td></tr>
+     </table>
 
   </body>
 </html>
